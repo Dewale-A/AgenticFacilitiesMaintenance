@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="750" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="agent1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#2563eb"/>
+    </linearGradient>
+    <linearGradient id="agent2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+    <linearGradient id="agent3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="agent4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="agent5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#dc2626"/>
+    </linearGradient>
+    <linearGradient id="agent6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#0891b2"/>
+    </linearGradient>
+    <linearGradient id="govGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f43f5e"/>
+      <stop offset="100%" style="stop-color:#e11d48"/>
+    </linearGradient>
+    <linearGradient id="toolGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#334155"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+    <marker id="arrowGov" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f43f5e"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="750" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="600" y="45" text-anchor="middle" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700">AgenticFacilitiesMaintenance</text>
+  <text x="600" y="70" text-anchor="middle" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="14">Governance-First Design | Human-in-the-Loop | 6-Agent Sequential Pipeline</text>
+
+  <!-- Input Box -->
+  <g transform="translate(30, 110)">
+    <rect width="140" height="80" rx="12" fill="url(#toolGrad)" filter="url(#shadow)" stroke="#475569" stroke-width="1"/>
+    <text x="70" y="35" text-anchor="middle" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600">Work Order</text>
+    <text x="70" y="55" text-anchor="middle" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11">FastAPI Input</text>
+  </g>
+
+  <!-- Agent Row 1 (Agents 1-3) -->
+  <!-- Agent 1: Intake -->
+  <g transform="translate(220, 100)">
+    <rect width="160" height="100" rx="12" fill="url(#agent1)" filter="url(#shadow)"/>
+    <circle cx="80" cy="28" r="14" fill="rgba(255,255,255,0.2)"/>
+    <text x="80" y="33" text-anchor="middle" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">1</text>
+    <text x="80" y="55" text-anchor="middle" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600">Intake Agent</text>
+    <text x="80" y="72" text-anchor="middle" fill="#bfdbfe" font-family="Inter, Arial, sans-serif" font-size="10">Validate &amp; Register</text>
+    <text x="80" y="85" text-anchor="middle" fill="#bfdbfe" font-family="Inter, Arial, sans-serif" font-size="10">Identify Assets</text>
+  </g>
+
+  <!-- Agent 2: Triage -->
+  <g transform="translate(420, 100)">
+    <rect width="160" height="100" rx="12" fill="url(#agent2)" filter="url(#shadow)"/>
+    <circle cx="80" cy="28" r="14" fill="rgba(255,255,255,0.2)"/>
+    <text x="80" y="33" text-anchor="middle" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">2</text>
+    <text x="80" y="55" text-anchor="middle" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600">Triage Agent</text>
+    <text x="80" y="72" text-anchor="middle" fill="#fef3c7" font-family="Inter, Arial, sans-serif" font-size="10">Assign Priority</text>
+    <text x="80" y="85" text-anchor="middle" fill="#fef3c7" font-family="Inter, Arial, sans-serif" font-size="10">Classify Trade</text>
+  </g>
+
+  <!-- Agent 3: Planning -->
+  <g transform="translate(620, 100)">
+    <rect width="160" height="100" rx="12" fill="url(#agent3)" filter="url(#shadow)"/>
+    <circle cx="80" cy="28" r="14" fill="rgba(255,255,255,0.2)"/>
+    <text x="80" y="33" text-anchor="middle" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">3</text>
+    <text x="80" y="55" text-anchor="middle" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600">Planning Agent</text>
+    <text x="80" y="72" text-anchor="middle" fill="#e9d5ff" font-family="Inter, Arial, sans-serif" font-size="10">Cost Estimate</text>
+    <text x="80" y="85" text-anchor="middle" fill="#e9d5ff" font-family="Inter, Arial, sans-serif" font-size="10">Repair vs Replace</text>
+  </g>
+
+  <!-- Agent Row 2 (Agents 4-6) -->
+  <!-- Agent 4: Knowledge -->
+  <g transform="translate(220, 260)">
+    <rect width="160" height="100" rx="12" fill="url(#agent4)" filter="url(#shadow)"/>
+    <circle cx="80" cy="28" r="14" fill="rgba(255,255,255,0.2)"/>
+    <text x="80" y="33" text-anchor="middle" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">4</text>
+    <text x="80" y="55" text-anchor="middle" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600">Knowledge Agent</text>
+    <text x="80" y="72" text-anchor="middle" fill="#a7f3d0" font-family="Inter, Arial, sans-serif" font-size="10">RAG Search</text>
+    <text x="80" y="85" text-anchor="middle" fill="#a7f3d0" font-family="Inter, Arial, sans-serif" font-size="10">Procedures &amp; Specs</text>
+  </g>
+
+  <!-- Agent 5: Compliance -->
+  <g transform="translate(420, 260)">
+    <rect width="160" height="100" rx="12" fill="url(#agent5)" filter="url(#shadow)"/>
+    <circle cx="80" cy="28" r="14" fill="rgba(255,255,255,0.2)"/>
+    <text x="80" y="33" text-anchor="middle" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">5</text>
+    <text x="80" y="55" text-anchor="middle" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600">Compliance Agent</text>
+    <text x="80" y="72" text-anchor="middle" fill="#fecaca" font-family="Inter, Arial, sans-serif" font-size="10">Safety Checks</text>
+    <text x="80" y="85" text-anchor="middle" fill="#fecaca" font-family="Inter, Arial, sans-serif" font-size="10">Permits &amp; Regs</text>
+  </g>
+
+  <!-- Agent 6: Reporting -->
+  <g transform="translate(620, 260)">
+    <rect width="160" height="100" rx="12" fill="url(#agent6)" filter="url(#shadow)"/>
+    <circle cx="80" cy="28" r="14" fill="rgba(255,255,255,0.2)"/>
+    <text x="80" y="33" text-anchor="middle" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">6</text>
+    <text x="80" y="55" text-anchor="middle" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600">Reporting Agent</text>
+    <text x="80" y="72" text-anchor="middle" fill="#a5f3fc" font-family="Inter, Arial, sans-serif" font-size="10">Executive Summary</text>
+    <text x="80" y="85" text-anchor="middle" fill="#a5f3fc" font-family="Inter, Arial, sans-serif" font-size="10">KPIs &amp; Metrics</text>
+  </g>
+
+  <!-- Arrows between agents -->
+  <!-- Input to Agent 1 -->
+  <path d="M 170 150 L 210 150" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+  <!-- Agent 1 to 2 -->
+  <path d="M 380 150 L 410 150" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+  <!-- Agent 2 to 3 -->
+  <path d="M 580 150 L 610 150" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+  <!-- Agent 3 down to row 2 start area -->
+  <path d="M 700 200 L 700 230 L 300 230 L 300 250" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+  <!-- Agent 4 to 5 -->
+  <path d="M 380 310 L 410 310" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+  <!-- Agent 5 to 6 -->
+  <path d="M 580 310 L 610 310" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- Governance Engine -->
+  <g transform="translate(850, 180)">
+    <rect width="300" height="140" rx="16" fill="url(#govGrad)" filter="url(#shadow)" stroke="#f43f5e" stroke-width="2"/>
+    <text x="150" y="35" text-anchor="middle" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Governance Engine</text>
+    <text x="150" y="60" text-anchor="middle" fill="#fecdd3" font-family="Inter, Arial, sans-serif" font-size="11">Policy Enforcement</text>
+    <line x1="30" y1="75" x2="270" y2="75" stroke="#fecdd3" stroke-width="0.5" opacity="0.3"/>
+    <text x="25" y="95" fill="#fecdd3" font-family="Inter, Arial, sans-serif" font-size="10">Cost Threshold Check</text>
+    <text x="25" y="110" fill="#fecdd3" font-family="Inter, Arial, sans-serif" font-size="10">Confidence Validation</text>
+    <text x="25" y="125" fill="#fecdd3" font-family="Inter, Arial, sans-serif" font-size="10">Safety &amp; Compliance</text>
+    <text x="170" y="95" fill="#fecdd3" font-family="Inter, Arial, sans-serif" font-size="10">Audit Trail Logging</text>
+    <text x="170" y="110" fill="#fecdd3" font-family="Inter, Arial, sans-serif" font-size="10">HITL Escalation</text>
+    <text x="170" y="125" fill="#fecdd3" font-family="Inter, Arial, sans-serif" font-size="10">Decision Provenance</text>
+  </g>
+
+  <!-- Arrow from Agent 6 to Governance -->
+  <path d="M 780 310 L 815 310 L 815 250 L 840 250" stroke="#f43f5e" stroke-width="2" marker-end="url(#arrowGov)" fill="none"/>
+
+  <!-- Tools Section -->
+  <g transform="translate(30, 420)">
+    <rect width="540" height="140" rx="12" fill="url(#toolGrad)" filter="url(#shadow)" stroke="#475569" stroke-width="1"/>
+    <text x="270" y="28" text-anchor="middle" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600">Agent Tools</text>
+    <line x1="20" y1="40" x2="520" y2="40" stroke="#475569" stroke-width="0.5"/>
+
+    <!-- CMMS Tools -->
+    <text x="20" y="62" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600">CMMS Tools (Simulated AiM API)</text>
+    <text x="20" y="80" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="10">Asset Lookup | Maintenance History | Technician Search | Parts Inventory | Work Order Search</text>
+
+    <!-- RAG Tools -->
+    <text x="20" y="105" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600">RAG Pipeline (LangChain + ChromaDB)</text>
+    <text x="20" y="123" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="10">Semantic Search | HVAC Guide | Elevator Guide | Plumbing/Electrical Guide | Safety Compliance Guide</text>
+  </g>
+
+  <!-- Dashed lines from tools to agents -->
+  <path d="M 300 420 L 300 370" stroke="#475569" stroke-width="1" stroke-dasharray="4,4" fill="none"/>
+  <path d="M 500 420 L 500 370" stroke="#475569" stroke-width="1" stroke-dasharray="4,4" fill="none"/>
+
+  <!-- Output Section -->
+  <g transform="translate(600, 420)">
+    <rect width="260" height="140" rx="12" fill="url(#toolGrad)" filter="url(#shadow)" stroke="#475569" stroke-width="1"/>
+    <text x="130" y="28" text-anchor="middle" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600">Output</text>
+    <line x1="20" y1="40" x2="240" y2="40" stroke="#475569" stroke-width="0.5"/>
+
+    <!-- Auto Approved -->
+    <rect x="20" y="55" width="100" height="30" rx="8" fill="#059669" opacity="0.8"/>
+    <text x="70" y="75" text-anchor="middle" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600">Auto-Approved</text>
+
+    <!-- Pending Review -->
+    <rect x="140" y="55" width="100" height="30" rx="8" fill="#f59e0b" opacity="0.8"/>
+    <text x="190" y="75" text-anchor="middle" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600">Pending Review</text>
+
+    <!-- Human Review Box -->
+    <rect x="20" y="100" width="220" height="28" rx="8" fill="none" stroke="#f43f5e" stroke-width="1" stroke-dasharray="4,4"/>
+    <text x="130" y="119" text-anchor="middle" fill="#fecdd3" font-family="Inter, Arial, sans-serif" font-size="10">Human Reviews via /reviews API</text>
+  </g>
+
+  <!-- Arrow from Governance to Output -->
+  <path d="M 1000 320 L 1000 400 L 730 400 L 730 420" stroke="#f43f5e" stroke-width="2" marker-end="url(#arrowGov)" fill="none"/>
+
+  <!-- Data Layer -->
+  <g transform="translate(890, 420)">
+    <rect width="270" height="140" rx="12" fill="url(#toolGrad)" filter="url(#shadow)" stroke="#475569" stroke-width="1"/>
+    <text x="135" y="28" text-anchor="middle" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600">Data Layer</text>
+    <line x1="20" y1="40" x2="250" y2="40" stroke="#475569" stroke-width="0.5"/>
+
+    <text x="20" y="62" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600">SQLite (CMMS Simulation)</text>
+    <text x="20" y="80" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="10">20 Assets | 8 Technicians | 27 Records</text>
+
+    <text x="20" y="102" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600">ChromaDB (Vector Store)</text>
+    <text x="20" y="120" fill="#64748b" font-family="Inter, Arial, sans-serif" font-size="10">4 Maintenance Manuals | Ada-002 Embeddings</text>
+  </g>
+
+  <!-- Tech badges -->
+  <g transform="translate(30, 600)">
+    <rect width="120" height="30" rx="15" fill="#334155" stroke="#475569" stroke-width="1"/>
+    <text x="60" y="20" text-anchor="middle" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11">CrewAI</text>
+  </g>
+  <g transform="translate(165, 600)">
+    <rect width="120" height="30" rx="15" fill="#334155" stroke="#475569" stroke-width="1"/>
+    <text x="60" y="20" text-anchor="middle" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11">LangChain</text>
+  </g>
+  <g transform="translate(300, 600)">
+    <rect width="120" height="30" rx="15" fill="#334155" stroke="#475569" stroke-width="1"/>
+    <text x="60" y="20" text-anchor="middle" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11">FastAPI</text>
+  </g>
+  <g transform="translate(435, 600)">
+    <rect width="120" height="30" rx="15" fill="#334155" stroke="#475569" stroke-width="1"/>
+    <text x="60" y="20" text-anchor="middle" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11">ChromaDB</text>
+  </g>
+  <g transform="translate(570, 600)">
+    <rect width="120" height="30" rx="15" fill="#334155" stroke="#475569" stroke-width="1"/>
+    <text x="60" y="20" text-anchor="middle" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11">Docker</text>
+  </g>
+  <g transform="translate(705, 600)">
+    <rect width="120" height="30" rx="15" fill="#334155" stroke="#475569" stroke-width="1"/>
+    <text x="60" y="20" text-anchor="middle" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11">Pydantic</text>
+  </g>
+  <g transform="translate(840, 600)">
+    <rect width="120" height="30" rx="15" fill="#334155" stroke="#475569" stroke-width="1"/>
+    <text x="60" y="20" text-anchor="middle" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="11">OpenAI</text>
+  </g>
+</svg>
