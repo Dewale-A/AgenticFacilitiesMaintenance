@@ -232,6 +232,44 @@ The database is seeded with realistic facilities data:
 - **27 maintenance records** with intentional patterns (e.g., AHU-B12-01 has recurring failures)
 - **4 maintenance manuals** covering HVAC, elevator, plumbing/electrical, and safety compliance
 
+## Production Considerations
+
+This project demonstrates agentic AI architecture patterns for facilities maintenance in regulated environments. For production deployment, the following enhancements would be required:
+
+**Authentication and Authorization**
+- Integrate with identity provider (Azure AD, Okta, or similar)
+- Implement role-based access control (RBAC) on all API endpoints
+- Bind human review decisions to authenticated identities
+- Add API key or OAuth2 token validation
+
+**Data Layer**
+- Replace SQLite with PostgreSQL for concurrent access and production reliability
+- Implement connection pooling
+- Add database migrations (Alembic)
+- Connect to actual CMMS systems (AiM, Maximo, ServiceNow) via API instead of simulated data
+
+**Agent Output Reliability**
+- Use CrewAI structured output (Pydantic output models) for deterministic agent responses
+- Implement output validation and retry logic for malformed agent responses
+- Add fallback handling when LLM API calls fail or timeout
+
+**Observability**
+- Structured logging (JSON format) with correlation IDs per work order
+- Metrics collection (Prometheus) for agent processing times and success rates
+- Alerting on failed governance checks or escalation backlogs
+- Dashboard integration (Grafana) for real-time work order monitoring
+
+**Testing**
+- Expand test suite to cover all agent interactions
+- Add integration tests with mocked LLM responses
+- Implement contract tests for API endpoints
+- Add load testing for concurrent work order processing
+
+**Cost and Scheduling Precision**
+- Use Python Decimal type for all monetary calculations
+- Implement configurable cost estimation rules per trade and building
+- Add calendar integration for technician scheduling and availability
+
 ## License
 
 MIT
